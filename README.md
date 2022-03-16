@@ -1949,17 +1949,19 @@ If you inspect your files, you will see that the name of the sequences is not th
 
 Example:
 
+```{bash}
 cat OG0007494_OFnuc_alig_oneline_trimmed_gb.fasta \| grep "\>"\| head
+```
 
-\>Dae_1\_DN19143_c0_g1_i1
+>\>Dae_1\_DN19143_c0_g1_i1<br/>
+>\>Daur_1\_DN8475_c0_g1_i2<br/>
 
-\>Daur_1\_DN8475_c0_g1_i2
-
+```{bash}
 cat OG0007495_OFnuc_alig_oneline_trimmed_gb.fasta \| grep "\>"\| head
+```{bash}
 
-\>Dae_1\_DN3223_c0_g1_i1
-
-\>Daur_1\_DN2292_c0_g1_i1
+>\>Dae_1\_DN3223_c0_g1_i1<br/>
+>\>Daur_1\_DN2292_c0_g1_i1<br/>
 
 Consequently, we have to change this and keep only the name of the sample. For the concatenation, all the sequences of the same orthogroup have to have the same name. Use the following script to change the names of the files to concatenate:
 
@@ -2065,23 +2067,15 @@ echo iqtree without partitions finished
 
 You will obtain the following files:
 
-SC_nuc_concat.fasta.**model.gz**
-
-SC_nuc_concat.fasta.**mldist**
-
-SC_nuc_concat.fasta.**bionj**
-
-SC_nuc_concat.fasta.**splits.nex**
-
-SC_nuc_concat.fasta.**contree**
-
-SC_nuc_concat.fasta.**treefile**
-
-SC_nuc_concat.fasta.**iqtree**
-
-SC_nuc_concat.fasta.**ckp.gz**
-
-SC_nuc_concat.fasta.**log**
+>SC_nuc_concat.fasta.**model.gz**<br/>
+>SC_nuc_concat.fasta.**mldist**<br/>
+>SC_nuc_concat.fasta.**bionj**<br/>
+>SC_nuc_concat.fasta.**splits.nex**<br/>
+>SC_nuc_concat.fasta.**contree**<br/>
+>SC_nuc_concat.fasta.**treefile**<br/>
+>SC_nuc_concat.fasta.**iqtree**<br/>
+>SC_nuc_concat.fasta.**ckp.gz**<br/>
+>SC_nuc_concat.fasta.**log**<br/>
 
 You can [install newick-utils with conda](https://anaconda.org/bioconda/newick_utils) and use it from the command line to visualize the tree from the terminal. Please look at [newick-utils documentation](http://gensoft.pasteur.fr/docs/newick-utils/1.6/nwutils_tutorial.pdf) to get information about this useful tool.
 
@@ -2337,21 +2331,17 @@ You can check the convergence of the parameters with tracecomp and bpcomp and ta
 tracecomp -x 1000  chain_0.trace chain_1.trace
 ```
 
-maxdiff \< 0.1 and minimum effective size\>300: good run
-
-maxdiff \< 0.3 and minimum effective size \> 50: acceptable run
+>maxdiff \< 0.1 and minimum effective size\>300: good run<br/>
+>maxdiff \< 0.3 and minimum effective size \> 50: acceptable run<br/>
 
 ```{bash}
 bpcomp -x 1000  chain_0 chain_1
 ```
 
-maxdiff \< 0.1: good run
-
-maxdiff \< 0.3: acceptable: gives a good qualitative picture of the posterior consensus
-
-0.3 \< maxdiff \< 1: the sample is not yet sufficiently large, and the chains have not converged, but this is on the right track
-
-maxdiff = 1 even after 10,000 points, this indicates that at least one of the runs is stuck in a local maximum
+>maxdiff \< 0.1: good run<br/>
+>maxdiff \< 0.3: acceptable: gives a good qualitative picture of the posterior consensus<br/>
+>0.3 \< maxdiff \< 1: the sample is not yet sufficiently large, and the chains have not converged, but this is on the right track<br/>
+>maxdiff = 1 even after 10,000 points, this indicates that at least one of the runs is stuck in a local maximum<br/>
 
 Please, consult the manual for a better explanation.
 
@@ -2766,11 +2756,11 @@ cat *.rooted.order.ultra.dic.tree > all_rooted.order.ultra.dic.tree
 
 4.  Visualizing trees in DensiTree
 
-    Open DensiTree from terminal:
+Open DensiTree from terminal:
 
-    ```{bash}
-    java -jar ~/"PATH_to"/DensiTree.v2.2.7.jar all_rooted.order.ultra.dic.tree
-    ```
+```{bash}
+java -jar ~/"PATH_to"/DensiTree.v2.2.7.jar all_rooted.order.ultra.dic.tree
+```
 
 # Final remarks
 
