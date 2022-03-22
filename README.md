@@ -2140,7 +2140,6 @@ From [IQ-TREE documentation](http://www.iqtree.org/doc/Complex-Models):
 
 *Starting with version 1.5.0, IQ-TREE provides a new posterior mean site frequency (PMSF) model as a rapid approximation to the time and memory consuming profile mixture models `C10` to `C60` ([Le et al., 2008a](https://doi.org/10.1093/bioinformatics/btn445); a variant of PhyloBayes' `CAT` model)."*
 
-Here, we will use the implementations in IQTREE of mixture model for nucleotide in IQTREE and the Site-specific frequency models for protein data. In addition we will use the Bayesian CAT model implemented in PhyloBayes, for protein and nucleotide data.
 
 ### IX.2.1 [Mixture Model in IQ-TREE](http://www.iqtree.org/doc/Complex-Models)
 
