@@ -1236,9 +1236,11 @@ done
 
 ```
 
-# IV. Selecting the longest isoform in \*pep files using the [script of Tauana Cunha](https://github.com/tauanajc/Cunha_Giribet_2019_ProcRSocB/blob/master/choose_longest_iso.py)
+# IV. Selecting the longest isoform in \*pep files 
 
-Download the script of Tauana Cunha in your script's directory
+To select the longer isoform we will use the [script of Tauana Cunha](https://github.com/tauanajc/Cunha_Giribet_2019_ProcRSocB/blob/master/choose_longest_iso.py). This script is based on a original script published by [Fernández et al (2014)](https://doi.org/10.1093/molbev/msu108)  
+
+Download the script in your script's directory
 
 ```{bash}
 cd PATH_to_script/
