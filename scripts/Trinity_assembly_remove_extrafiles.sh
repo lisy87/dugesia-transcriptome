@@ -27,34 +27,9 @@ for READ1 in *_1_trimP.fq.gz
 
     echo "**************" Assembly $READ1 and $READ2 "*************"
 
-Trinity --seqType fq --max_memory $MEMORY --left $READ1 --right $READ2 --CPU $CPU --output ./$NAME.trinity_out
+Trinity --seqType fq --max_memory $MEMORY --left $READ1 --right $READ2 --CPU $CPU --output ./$NAME.trinity_out --full_cleanup
 
       echo "**************" $NAME Assembled "*************"
-      echo "**************" removing extra files "******************"
-        cd ./$NAME.trinity_out
-        rm left.fa.ok
-        rm right.fa.ok
-        rm both.fa
-        rm both.fa.ok
-        rm both.fa.read_count
-        rm jellyfish.kmers.25.asm.fa
-        rm jellyfish.kmers.25.asm.fa.histo
-        rm inchworm.kmer_count
-        rm inchworm.DS.fa
-        rm inchworm.DS.fa.finished
-        rm scaffolding_entries.sam
-        rm pipeliner.17805.cmds
-        rm -r chrysalis
-        rm read_partitions
-        rm partitioned_reads.files.list
-        rm partitioned_reads.files.list.ok
-        rm recursive_trinity.cmds
-        rm recursive_trinity.cmds.ok
-        rm recursive_trinity.cmds.completed
-        rm -r insilico_read_normalization
-        cd ../
-
-      echo "**************" extra files removed "******************"
       echo "*******************************************************"
 done
 
