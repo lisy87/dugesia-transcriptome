@@ -348,8 +348,8 @@ write(DGEgenes, file = paste0(comparation,"DGE_genes.txt"))
 # Two outputs will be generated for each set of genes tested for functional enrichment, one containing the enriched categories, and another containing the depleted categories (see .enriched and .depleted files). The .enriched file will contain those categories that are found to have enriched representation among that set of genes. Similarly, the .depleted file will contain those functional categories that are depleted (under-represented) among that very same set of target genes.
 
 # Obtain the input to REVIGO
-# cat asexual.GOseq.enriched | cut -f 1-2 > "comparation"_asexual.GOseq.enriched_to_revigo.txt
-# cat sexual.GOseq.enriched | cut -f 1-2 > "comparation"_sexual.GOseq.enriched_to_revigo.txt
+# cat asexual.GOseq.enriched | cut -f 1-2 > "comparison"_asexual.GOseq.enriched_to_revigo.txt
+# cat sexual.GOseq.enriched | cut -f 1-2 > "comparison"_sexual.GOseq.enriched_to_revigo.txt
 
 ## Using REVIGO to summarize results:
 # Generating REVIGO's input
