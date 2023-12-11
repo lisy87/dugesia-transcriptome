@@ -1487,7 +1487,7 @@ The \*cds files are interleaved and you need a sequential format. You can conver
 
 ## interleave_to_oneline.pl 
 
-# script taked from Kenosis's biostars post: https://www.biostars.org/p/76376/
+# script taken from Kenosis's biostars post: https://www.biostars.org/p/76376/
 
 use strict;
 use warnings;
