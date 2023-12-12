@@ -1471,7 +1471,7 @@ if __name__ == "__main__":
         sc_ids.close()
 
     for (i, v) in data.items():
-        with open(filenames[i].strip(), "w+") as output:
+        with open(filenames[i].strip()+'_seq.txt', "w+") as output:
             output.writelines("%s\n" % l for l in v)
             output.close()
             
