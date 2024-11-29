@@ -2505,6 +2505,35 @@ echo "**************************************************************************
 done
 
 ```
+**NOTE** if you use mixture model in very short alignment, be sure that you do not have a message like this in the log file of iqtree output, specially working with protein data: "The mixture model might be overfitting because some mixture weights are estimated close to zero". This mean that you have an overfitting in your mixture model. Therefore, we recommend to use the option -m MFP instead of mixture model to obtain the gene trees. Using the MFP option, the best-fit model is stimated with the ModelFinder strategy and the tree is obtained using this model. 
+
+```{bash}
+##script_name: genetree_to_ASTRAL.sh
+
+#!/bin/sh
+#$ -cwd
+#$ -j y
+#$ -V                    #export environment var
+#$ -N iqtree_ft             #name Job
+#$ -m ea                 #add email
+echo "***************************************************************"
+echo "*********" $HOSTNAME " ****** JOB_ID=" $JOB_ID "  *************"
+echo "***************************************************************"
+
+# conda activate iq3
+
+THREADS=$1
+
+for FILE in *.fasta
+do
+
+iqtree -s $FILE -m MFP -bb 10000 -nt $THREADS
+
+echo "*****************" iqtree $FILE finished "************************************"
+echo "*******************************************************************************"
+done
+
+```
 
 ## XI.2. Running ASTRAL
 
