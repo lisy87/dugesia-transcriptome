@@ -1,3 +1,4 @@
+
 '''
 select_OG_all_sp.py
 Script to capture Orthogroups shared by all species (NOT SC) from OrthoFinder output.
@@ -12,7 +13,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Select Orthogroups with all species present (NOT SC)',
             formatter_class=argparse.RawDescriptionHelpFormatter,
       epilog=textwrap.dedent('''\
-	for extract the orthogroups formed by all species and not SC  
+      for extract the orthogroups formed by all species and not SC  
       python select_OG_all_sp.py -f=Orthogroups.GeneCount.tsv -o=out.txt -c="species number"
       for extract the orthogroups formed by species (in 2,3,4 columns) and not SC  
       python select_OG_all_sp.py -f=Orthogroups.GeneCount.tsv -o=out.txt -c=2,3,4
@@ -48,4 +49,3 @@ if __name__ == "__main__":
         tsvwriter.writerows(output_samples)
 
     print("{} selected genes.".format(len(output_samples) - 1))
-
